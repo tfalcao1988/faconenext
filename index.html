@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Falcone Next — Inteligência que transforma negócios</title>
-  <meta name="description" content="Consultoria — Inteligência que transforma negócios. Estratégia, tecnologia e execução para acelerar resultados." />
-  <meta property="og:title" content="Falcone Next" />
-  <meta property="og:description" content="Inteligência que transforma negócios." />
+  <title>Falcone Next — Gestão & Negócios</title>
+  <meta name="description" content="Consultoria Financeira e Estratégica com Mais de 40 Anos de Experiência." />
+  <meta property="og:title" content="Falcone Next — Gestão & Negócios" />
+  <meta property="og:description" content="Consultoria Financeira e Estratégica com Mais de 40 Anos de Experiência." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,16 +20,25 @@
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
     .hero-bg { background: radial-gradient(1200px 400px at 10% 10%, rgba(37,99,235,.15), transparent),radial-gradient(1000px 500px at 90% 10%, rgba(14,165,233,.15), transparent); }
   </style>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="icon" href="DATA_FAVICON_PLACEHOLDER" sizes="any">
+  <link rel="apple-touch-icon" href="DATA_FAVICON_PLACEHOLDER">
 </head>
 <body class="bg-white text-slate-800">
   <!-- Header -->
   <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-      <a href="#" class="font-extrabold text-xl tracking-tight">Falcone<span class="text-blue-600"> Next</span></a>
+      <a href="#" class="flex items-center gap-2" aria-label="Falcone Next">
+        <img src="logo-falcone.png" alt="Falcone Next — Gestão & Negócios" class="h-8 w-auto"/>
+      </a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
         <a href="#sobre" class="hover:text-blue-600">Sobre</a>
+        <a href="#apresentacao" class="hover:text-blue-600">Apresentação</a>
+        <a href="#experiencia" class="hover:text-blue-600">Experiência</a>
         <a href="#servicos" class="hover:text-blue-600">Serviços</a>
-        <a href="#portfolio" class="hover:text-blue-600">Cases</a>
+        <a href="#metodologia" class="hover:text-blue-600">Metodologia</a>
         <a href="#contato" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">Contato</a>
       </nav>
       <button aria-label="Abrir menu" class="md:hidden p-2" onclick="document.getElementById('mobile').classList.toggle('hidden')">
@@ -51,7 +60,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">Inteligência que transforma negócios.</h1>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight" aria-label="Consultoria Financeira e Estratégica com Mais de 40 Anos de Experiência">Consultoria Financeira e Estratégica com Mais de 40 Anos de Experiência</h1>
           <p class="mt-5 text-lg text-slate-600">Consultoria para estratégia, eficiência e crescimento. Atuamos com dados, processos e tecnologia para acelerar resultados.</p>
           <div class="mt-8 flex gap-3">
             <a href="#contato" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">Fale com a Falcone Next</a>
@@ -72,13 +81,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="max-w-3xl">
         <h2 class="text-3xl sm:text-4xl font-bold">Sobre a Falcone Next</h2>
-        <p class="mt-4 text-slate-600">A Falcone Next é uma consultoria focada em transformar negócios por meio de inteligência, dados e tecnologia. Atendemos empresas no Brasil e no exterior, com abordagem prática e orientada a resultados.</p>
-        <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
-          <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2 h-2 rounded-full bg-blue-600"></span> Estratégia, processos e dados</li>
-          <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2 h-2 rounded-full bg-blue-600"></span> Projetos sob medida</li>
-          <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2 h-2 rounded-full bg-blue-600"></span> Atuação remota e presencial</li>
-          <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2 h-2 rounded-full bg-blue-600"></span> Atendimento em português</li>
-        </ul>
+        <p class="mt-4 text-slate-600">Falcone Next — Gestão &amp; Negócios. Consultoria com foco em soluções práticas e resultados mensuráveis para empresas brasileiras e internacionais.</p>
       </div>
     </div>
   </section>
@@ -86,42 +89,119 @@
   <!-- Serviços -->
   <section id="servicos" class="py-16 bg-slate-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold">Serviços</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <h2 class="text-3xl sm:text-4xl font-bold">O que a Falcone Consultoria faz</h2>
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold text-lg">Estratégia & Planejamento</h3>
-          <p class="mt-2 text-sm text-slate-600">Diagnóstico, direcionadores de crescimento e roadmap de execução.</p>
+          <h3 class="font-semibold text-lg">Gestão de crise</h3>
+          <p class="mt-2 text-sm text-slate-600">Ação rápida em cenários críticos: caixa, renegociações e continuidade.</p>
         </div>
         <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold text-lg">Eficiência Operacional</h3>
-          <p class="mt-2 text-sm text-slate-600">Revisão de processos, indicadores e automação para reduzir custos.</p>
+          <h3 class="font-semibold text-lg">Linhas de apoio de crédito</h3>
+          <p class="mt-2 text-sm text-slate-600">Acesso e estruturação de crédito com visão de risco e garantias.</p>
         </div>
         <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold text-lg">Dados & Tecnologia</h3>
-          <p class="mt-2 text-sm text-slate-600">Métricas, dashboards e integrações para decisões melhores e mais rápidas.</p>
+          <h3 class="font-semibold text-lg">Estratégia com bancos e factories</h3>
+          <p class="mt-2 text-sm text-slate-600">Relacionamento, taxas, prazos e otimização de capital de giro.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold text-lg">Recuperação judicial</h3>
+          <p class="mt-2 text-sm text-slate-600">Preparação, documentação e condução estratégica do processo.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold text-lg">Logística tributária internacional</h3>
+          <p class="mt-2 text-sm text-slate-600">Fluxos de importação/exportação e benefícios fiscais aplicáveis.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold text-lg">Mercado imobiliário</h3>
+          <p class="mt-2 text-sm text-slate-600">Estruturação de operações e governança de investimentos.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold text-lg">Financiamento imobiliário</h3>
+          <p class="mt-2 text-sm text-slate-600">Análise de viabilidade, relacionamento bancário e garantias.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Cases / Portfólio -->
-  <section id="portfolio" class="py-16">
+  <!-- Experiência e Casos de Sucesso -->
+  <section id="experiencia" class="py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold">Resultados recentes</h2>
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <figure class="rounded-2xl overflow-hidden border border-slate-200">
-          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1600&auto=format&fit=crop" alt="Equipe em reunião" class="w-full h-48 object-cover" />
-          <figcaption class="p-4 text-sm">Plano de crescimento para PME — +22% em 6 meses</figcaption>
-        </figure>
-        <figure class="rounded-2xl overflow-hidden border border-slate-200">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop" alt="Mesa de negócios" class="w-full h-48 object-cover" />
-          <figcaption class="p-4 text-sm">Redesenho de processos — -18% de custos operacionais</figcaption>
-        </figure>
-        <figure class="rounded-2xl overflow-hidden border border-slate-200">
-          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop" alt="Painel de dados" class="w-full h-48 object-cover" />
-          <figcaption class="p-4 text-sm">Dashboard executivo — decisão em tempo real</figcaption>
-        </figure>
+      <h2 class="text-3xl sm:text-4xl font-bold">Experiência e Casos de Sucesso</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold">Automotivo</h3>
+          <p class="mt-2 text-sm text-slate-600">Projetos com <strong>Honda Motors</strong> e parceiros da cadeia.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold">Construção Civil</h3>
+          <p class="mt-2 text-sm text-slate-600">Atuação com <strong>pequenas e médias construtoras</strong> em planejamento financeiro e controle.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold">Alimentos</h3>
+          <p class="mt-2 text-sm text-slate-600">Resultados em <strong>mercado alimentício</strong> com foco em margem e capital de giro.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold">Healthcare</h3>
+          <p class="mt-2 text-sm text-slate-600">Eficiência operacional e estruturação financeira.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold">Outros setores</h3>
+          <p class="mt-2 text-sm text-slate-600">Soluções práticas em diferentes mercados, sempre com foco em resultados.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Apresentação Pessoal -->
+  <section id="apresentacao" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold">Apresentação Pessoal — CEO - Luiz Falcão</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-8">
+        <div>
+          <ul class="space-y-3 text-slate-700">
+            <li>• Formação: <strong>Mackenzie</strong>, Pós-graduação em <strong>Finanças</strong>.</li>
+            <li>• <strong>40 anos</strong> de trajetória profissional.</li>
+            <li>• Experiência na <strong>Bolsa de Valores</strong> e como <strong>empreendedor</strong>.</li>
+          </ul>
+          <p class="mt-6 text-slate-700">Além disso, nossa equipe conta com suporte de <strong>experts do mercado</strong>, conforme a necessidade: <em>advogados</em>, <em>tributaristas</em>, <em>contadores</em> e outros especialistas.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-slate-200">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1400&auto=format&fit=crop" alt="Apresentação profissional" class="w-full h-64 object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metodologia de Trabalho -->
+  <section id="metodologia" class="py-16 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold">Metodologia de Trabalho</h2>
+      <ol class="mt-8 grid md:grid-cols-3 gap-6 list-decimal list-inside">
+        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold">1) Diagnóstico financeiro inicial</h3>
+          <p class="mt-2 text-sm text-slate-600">Levantamento de cenário, riscos e oportunidades.</p>
+        </li>
+        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold">2) Planejamento estratégico sob medida</h3>
+          <p class="mt-2 text-sm text-slate-600">Definição de metas, plano de ação e governança.</p>
+        </li>
+        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-semibold">3) Acompanhamento e execução</h3>
+          <p class="mt-2 text-sm text-slate-600">Implantação assistida, indicadores e ajustes contínuos.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Por que escolher -->
+  <section id="diferenciais" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold">Por que escolher Falcone Next?</h2>
+      <ul class="mt-6 grid md:grid-cols-3 gap-6 text-sm">
+        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Experiência sólida (40+ anos)</strong><br/>Quatro décadas de atuação em finanças, mercados e gestão.</li>
+        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Confiança de marcas</strong><br/>Projetos com líderes e referências setoriais.</li>
+        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Visão estratégica e prática</strong><br/>Do diagnóstico à execução com foco em resultado.</li>
+      </ul>
     </div>
   </section>
 
@@ -136,18 +216,35 @@
             <li class="mt-2"><strong>WhatsApp:</strong> <a class="text-blue-600 hover:underline" href="https://wa.me/5511997117561" target="_blank" rel="noopener">(11) 9 9711‑7561</a></li>
           </ul>
         </div>
-        <form class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm" onsubmit="event.preventDefault(); alert('Obrigado! Sua mensagem foi enviada (simulação).'); this.reset();">
+        <form id="leadForm" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <input type="text" name="_gotcha" class="hidden" aria-hidden="true" tabindex="-1" autocomplete="off">
           <label class="block text-sm font-medium">Nome
-            <input required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Seu nome" />
+            <input name="nome" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Seu nome" />
           </label>
           <label class="block text-sm font-medium mt-4">Email
-            <input required type="email" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="voce@email.com" />
+            <input name="email" required type="email" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="voce@email.com" />
+          </label>
+          <label class="block text-sm font-medium mt-4">WhatsApp
+            <input name="whatsapp" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="(11) 99711-7561" />
+          </label>
+          <label class="block text-sm font-medium mt-4">Interesse
+            <select name="interesse" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+              <option>Gestão de crise</option>
+              <option>Linhas de crédito</option>
+              <option>Estratégia com bancos/factories</option>
+              <option>Recuperação judicial</option>
+              <option>Logística tributária internacional</option>
+              <option>Mercado/Financiamento imobiliário</option>
+              <option>Outro</option>
+            </select>
           </label>
           <label class="block text-sm font-medium mt-4">Mensagem
-            <textarea required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" rows="4" placeholder="Conte rapidamente seu desafio"></textarea>
+            <textarea name="mensagem" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" rows="4" placeholder="Conte rapidamente seu desafio"></textarea>
           </label>
-          <button class="mt-5 px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">Enviar</button>
-          <p class="mt-3 text-xs text-slate-500">Formulário de demonstração. Para receber mensagens reais, use um serviço como Formspree, Getform ou crie um backend.</p>
+          <button class="mt-5 w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">Enviar</button>
+          <p id="leadOk" class="hidden mt-3 text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg p-3">Obrigado! Recebemos sua mensagem e entraremos em contato.</p>
+          <p id="leadErr" class="hidden mt-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg p-3">Ops! Não foi possível enviar agora. Tente novamente em instantes.</p>
+          <p class="mt-3 text-xs text-slate-500">Ao enviar, você concorda em ser contatado por email/WhatsApp. Seus dados não serão compartilhados.</p>
         </form>
       </div>
     </div>
@@ -162,7 +259,46 @@
   </footer>
 
   <script>
+    // Ano no rodape
     document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // --- Lead capture via Formspree (AJAX) ---
+    const form = document.getElementById('leadForm');
+    if (form) {
+      const ok = document.getElementById('leadOk');
+      const err = document.getElementById('leadErr');
+      // >>> Substitua abaixo pelo seu endpoint do Formspree (Ex.: https://formspree.io/f/abcdwxyz)
+      const FORMSPREE_ENDPOINT = 'https://formspree.io/f/SEU_ID_AQUI';
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        ok.classList.add('hidden');
+        err.classList.add('hidden');
+
+        // Honeypot anti-spam
+        const honeypot = form.querySelector('input[name="_gotcha"]');
+        if (honeypot && honeypot.value) {
+          return; // bot
+        }
+
+        const data = Object.fromEntries(new FormData(form).entries());
+        try {
+          const res = await fetch(FORMSPREE_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+          });
+          if (res.ok) {
+            ok.classList.remove('hidden');
+            form.reset();
+          } else {
+            err.classList.remove('hidden');
+          }
+        } catch (_) {
+          err.classList.remove('hidden');
+        }
+      });
+    }
   </script>
 </body>
 </html>
