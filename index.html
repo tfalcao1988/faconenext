@@ -8,12 +8,12 @@
   <meta property="og:title" content="Falcone Next — Gestão & Negócios" />
   <meta property="og:description" content="Consultoria Financeira e Estratégica com Mais de 40 Anos de Experiência." />
   <meta property="og:type" content="website" />
-  <!-- Favicon mínimo embutido (1x1 PNG transparente) só para não depender de arquivo -->
+  <!-- Favicon mínimo embutido -->
   <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" sizes="any">
   <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
@@ -26,245 +26,231 @@
   </style>
 </head>
 <body class="bg-white text-slate-800">
-  <!-- Header -->
-  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-      <a href="#" class="flex items-center gap-3" aria-label="Falcone Next">
-        <!-- LOGO: usa docs/logo.png -->
-        <img src="logo.png?v=4" alt="Falcone Next — Gestão & Negócios"
-             class="h-16 w-auto -mt-[2px] object-contain"/>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#sobre" class="hover:text-blue-600">Sobre</a>
-        <a href="#apresentacao" class="hover:text-blue-600">Apresentação</a>
-        <a href="#experiencia" class="hover:text-blue-600">Experiência</a>
-        <a href="#servicos" class="hover:text-blue-600">Serviços</a>
-        <a href="#metodologia" class="hover:text-blue-600">Metodologia</a>
-        <a href="#contato" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">Contato</a>
-      </nav>
-      <button aria-label="Abrir menu" class="md:hidden p-2" onclick="document.getElementById('mobile').classList.toggle('hidden')">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M3.75 5.25a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5H4.5a.75.75 0 0 1-.75-.75Zm0 6a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5H4.5a.75.75 0 0 1-.75-.75Zm0 6a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5H4.5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" /></svg>
-      </button>
-    </div>
-    <div id="mobile" class="md:hidden hidden border-t border-slate-200">
-      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
-        <a href="#sobre" onclick="this.closest('#mobile').classList.add('hidden')">Sobre</a>
-        <a href="#apresentacao" onclick="this.closest('#mobile').classList.add('hidden')">Apresentação</a>
-        <a href="#experiencia" onclick="this.closest('#mobile').classList.add('hidden')">Experiência</a>
-        <a href="#servicos" onclick="this.closest('#mobile').classList.add('hidden')">Serviços</a>
-        <a href="#metodologia" onclick="this.closest('#mobile').classList.add('hidden')">Metodologia</a>
-        <a href="#contato" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white w-max" onclick="this.closest('#mobile').classList.add('hidden')">Contato</a>
-      </div>
-    </div>
-  </header>
+  <!-- SIDEBAR (logo lateral) -->
+  <aside class="hidden lg:flex fixed left-0 top-0 h-full w-28 bg-slate-50 border-r border-slate-200 items-start justify-center">
+    <a href="#topo" class="block pt-6">
+      <img src="logo.png?v=6" alt="Falcone Next — Gestão & Negócios" class="w-20 h-auto object-contain" />
+    </a>
+  </aside>
 
-  <!-- Hero -->
-  <section class="hero-bg">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">Consultoria Financeira e Estratégica com Mais de 40 Anos de Experiência</h1>
-          <p class="mt-5 text-lg text-slate-600">Soluções práticas para resultados. Estratégia, finanças e execução para empresas do Brasil e do exterior.</p>
-          <div class="mt-8 flex gap-3">
-            <a href="#contato" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">Fale com a Falcone Next</a>
-            <a href="#servicos" class="px-5 py-3 rounded-xl border border-slate-300 font-semibold hover:bg-slate-50">Ver serviços</a>
-          </div>
-        </div>
-        <div class="relative">
-          <div class="aspect-video rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600&auto=format&fit=crop" alt="Reunião de negócios" class="w-full h-full object-cover" />
+  <!-- WRAPPER: dá espaço pro sidebar em telas grandes -->
+  <div id="topo" class="lg:ml-28">
+
+    <!-- HEADER (sem logo) -->
+    <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <div class="text-slate-900 font-extrabold tracking-tight">Falcone Next</div>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#sobre" class="hover:text-blue-600">Sobre</a>
+          <a href="#apresentacao" class="hover:text-blue-600">Apresentação</a>
+          <a href="#experiencia" class="hover:text-blue-600">Experiência</a>
+          <a href="#servicos" class="hover:text-blue-600">Serviços</a>
+          <a href="#metodologia" class="hover:text-blue-600">Metodologia</a>
+          <a href="#contato" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">Contato</a>
+          <a href="https://www.linkedin.com/company/falcone-next" target="_blank" rel="noopener" class="text-slate-600 hover:text-blue-700">LinkedIn</a>
+        </nav>
+        <button aria-label="Abrir menu" class="md:hidden p-2" onclick="document.getElementById('mobile').classList.toggle('hidden')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M3.75 5.25a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5H4.5a.75.75 0 0 1-.75-.75Zm0 6a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5H4.5a.75.75 0 0 1-.75-.75Zm0 6a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5H4.5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/></svg>
+        </button>
+      </div>
+      <div id="mobile" class="md:hidden hidden border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm">
+          <a href="#sobre" onclick="this.closest('#mobile').classList.add('hidden')">Sobre</a>
+          <a href="#apresentacao" onclick="this.closest('#mobile').classList.add('hidden')">Apresentação</a>
+          <a href="#experiencia" onclick="this.closest('#mobile').classList.add('hidden')">Experiência</a>
+          <a href="#servicos" onclick="this.closest('#mobile').classList.add('hidden')">Serviços</a>
+          <a href="#metodologia" onclick="this.closest('#mobile').classList.add('hidden')">Metodologia</a>
+          <div class="flex items-center gap-3">
+            <a href="#contato" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white w-max" onclick="this.closest('#mobile').classList.add('hidden')">Contato</a>
+            <a href="https://www.linkedin.com/company/falcone-next" target="_blank" rel="noopener" class="text-slate-600 hover:text-blue-700">LinkedIn</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Sobre -->
-  <section id="sobre" class="py-16 sm:py-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="max-w-3xl">
-        <h2 class="text-3xl sm:text-4xl font-bold">Sobre a Falcone Next</h2>
-        <p class="mt-4 text-slate-600">Falcone Next — Gestão &amp; Negócios. Consultoria com foco em soluções práticas e resultados mensuráveis para empresas brasileiras e internacionais.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Apresentação -->
-  <section id="apresentacao" class="py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold">Apresentação Pessoal — CEO - Luiz Falcão</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-8">
-        <div>
-          <ul class="space-y-3 text-slate-700">
-            <li>• Formação: <strong>Mackenzie</strong>, Pós-graduação em <strong>Finanças</strong>.</li>
-            <li>• <strong>40 anos</strong> de trajetória profissional.</li>
-            <li>• Experiência na <strong>Bolsa de Valores</strong> e como <strong>empreendedor</strong>.</li>
-          </ul>
-          <p class="mt-6 text-slate-700">Além disso, nossa equipe conta com suporte de <strong>experts do mercado</strong>, conforme a necessidade: <em>advogados</em>, <em>tributaristas</em>, <em>contadores</em> e outros especialistas.</p>
-        </div>
-        <div class="rounded-2xl overflow-hidden border border-slate-200">
-          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1400&auto=format&fit=crop" alt="Apresentação profissional" class="w-full h-64 object-cover" />
+    <!-- HERO -->
+    <section class="hero-bg">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">Consultoria Financeira e Estratégica com Mais de 40 Anos de Experiência</h1>
+            <p class="mt-5 text-lg text-slate-600">
+              Atuação em <strong>banking</strong>, <strong>mercados de capitais (Bolsa de Valores)</strong> e <strong>consultoria estratégica</strong>.
+              Histórico de <strong>empreendedorismo</strong> e <strong>cases reais</strong> de crescimento e reestruturação.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#contato" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">Agendar conversa</a>
+              <a href="#servicos" class="px-5 py-3 rounded-xl border border-slate-300 font-semibold hover:bg-slate-50">Ver serviços</a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="aspect-video rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600&auto=format&fit=crop" alt="Reunião de negócios" class="w-full h-full object-cover" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experiência -->
-  <section id="experiencia" class="py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold">Experiência e Casos de Sucesso</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Automotivo</h3>
-          <p class="mt-2 text-sm text-slate-600">Projetos com <strong>Honda Motors</strong> e parceiros da cadeia.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Construção Civil</h3>
-          <p class="mt-2 text-sm text-slate-600">Atuação com <strong>pequenas e médias construtoras</strong> em planejamento financeiro e controle.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Alimentos</h3>
-          <p class="mt-2 text-sm text-slate-600">Resultados em <strong>mercado alimentício</strong> com foco em margem e capital de giro.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Healthcare</h3>
-          <p class="mt-2 text-sm text-slate-600">Eficiência operacional e estruturação financeira.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Outros setores</h3>
-          <p class="mt-2 text-sm text-slate-600">Soluções práticas em diferentes mercados, sempre com foco em resultados.</p>
+    <!-- SOBRE -->
+    <section id="sobre" class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <h2 class="text-3xl sm:text-4xl font-bold">Sobre a Falcone Next</h2>
+          <p class="mt-4 text-slate-600">
+            <strong>Gestão &amp; Negócios</strong> com foco em resultados. Atuamos em diagnóstico, planejamento e execução para
+            empresas que buscam performance financeira, governança e acesso a capital.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Serviços -->
-  <section id="servicos" class="py-16 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold">O que a Falcone Consultoria faz</h2>
-      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold text-lg">Gestão de crise</h3>
-          <p class="mt-2 text-sm text-slate-600">Ação rápida em cenários críticos: caixa, renegociações e continuidade.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold text-lg">Linhas de apoio de crédito</h3>
-          <p class="mt-2 text-sm text-slate-600">Acesso e estruturação de crédito com visão de risco e garantias.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold text-lg">Estratégia com bancos e factories</h3>
-          <p class="mt-2 text-sm text-slate-600">Relacionamento, taxas, prazos e otimização de capital de giro.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold text-lg">Recuperação judicial</h3>
-          <p class="mt-2 text-sm text-slate-600">Preparação, documentação e condução estratégica do processo.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold text-lg">Logística tributária internacional</h3>
-          <p class="mt-2 text-sm text-slate-600">Fluxos de importação/exportação e benefícios fiscais aplicáveis.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold text-lg">Mercado imobiliário</h3>
-          <p class="mt-2 text-sm text-slate-600">Estruturação de operações e governança de investimentos.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold text-lg">Financiamento imobiliário</h3>
-          <p class="mt-2 text-sm text-slate-600">Análise de viabilidade, relacionamento bancário e garantias.</p>
+    <!-- APRESENTAÇÃO PESSOAL -->
+    <section id="apresentacao" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-bold">Apresentação Pessoal — CEO • Luiz Falcão</h2>
+        <div class="mt-6 grid md:grid-cols-2 gap-8">
+          <div>
+            <ul class="space-y-3 text-slate-700">
+              <li>• Formação: <strong>Mackenzie</strong>, Pós-graduação em <strong>Finanças</strong>.</li>
+              <li>• <strong>40+ anos</strong> de trajetória profissional.</li>
+              <li>• <strong>Empreendedor</strong>: fundação, crescimento e turnaround de negócios (diversos business cases).</li>
+              <li>• <strong>Bolsa de Valores</strong>: experiência prática em mercados e estruturação.</li>
+              <li>• <strong>Consultoria estratégica &amp; banking</strong>: planejamento, governança e negociação com bancos.</li>
+            </ul>
+            <p class="mt-6 text-slate-700">
+              Contamos ainda com uma rede de <strong>experts</strong> conforme a necessidade do projeto:
+              <em>advogados</em>, <em>tributaristas</em>, <em>contadores</em> e outros especialistas.
+            </p>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-slate-200">
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1400&auto=format&fit=crop" alt="Apresentação profissional" class="w-full h-64 object-cover" />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Metodologia -->
-  <section id="metodologia" class="py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold">Metodologia de Trabalho</h2>
-      <ol class="mt-8 grid md:grid-cols-3 gap-6 list-decimal list-inside">
-        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">1) Diagnóstico financeiro inicial</h3>
-          <p class="mt-2 text-sm text-slate-600">Levantamento de cenário, riscos e oportunidades.</p>
-        </li>
-        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">2) Planejamento estratégico sob medida</h3>
-          <p class="mt-2 text-sm text-slate-600">Definição de metas, plano de ação e governança.</p>
-        </li>
-        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">3) Acompanhamento e execução</h3>
-          <p class="mt-2 text-sm text-slate-600">Implantação assistida, indicadores e ajustes contínuos.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Por que escolher -->
-  <section id="diferenciais" class="py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold">Por que escolher Falcone Next?</h2>
-      <ul class="mt-6 grid md:grid-cols-3 gap-6 text-sm">
-        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Experiência sólida (40+ anos)</strong><br/>Quatro décadas de atuação em finanças, mercados e gestão.</li>
-        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Confiança de marcas</strong><br/>Projetos com líderes e referências setoriais.</li>
-        <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Visão estratégica e prática</strong><br/>Do diagnóstico à execução com foco em resultado.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contato -->
-  <section id="contato" class="py-16 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 class="text-3xl sm:text-4xl font-bold">Fale com a gente</h2>
-          <p class="mt-4 text-slate-600">Converse sobre o seu desafio e receba uma proposta sem compromisso.</p>
-          <ul class="mt-6 text-sm text-slate-700">
-            <li class="mt-2"><strong>WhatsApp:</strong> <a class="text-blue-600 hover:underline" href="https://wa.me/5511997117561" target="_blank" rel="noopener">(11) 9 9711-7561</a></li>
-          </ul>
+    <!-- EXPERIÊNCIA E CASOS -->
+    <section id="experiencia" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-bold">Experiência e Casos de Sucesso</h2>
+        <p class="mt-4 text-slate-600 max-w-3xl">
+          Projetos em setores como <strong>Automotivo</strong> (ex.: Honda Motors), <strong>Construção</strong> (pequenas e médias construtoras),
+          <strong>Alimentos</strong>, <strong>Healthcare</strong>, <strong>Imobiliário</strong> e outros — sempre com foco em
+          <strong>margem</strong>, <strong>capital de giro</strong>, <strong>reestruturação de dívidas</strong>, alongamento de prazos,
+          eficiência tributária e governança.
+        </p>
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold">Automotivo</h3><p class="mt-2 text-sm text-slate-600">Cadeia de fornecedores e projetos com grandes montadoras.</p></div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold">Construção Civil</h3><p class="mt-2 text-sm text-slate-600">Planejamento financeiro, controle e financiamento de obras.</p></div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold">Alimentos</h3><p class="mt-2 text-sm text-slate-600">Giro de estoque, margem e eficiência operacional.</p></div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold">Healthcare</h3><p class="mt-2 text-sm text-slate-600">Reestruturação financeira e processos.</p></div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold">Imobiliário</h3><p class="mt-2 text-sm text-slate-600">Governança e estruturação de operações e investimentos.</p></div>
         </div>
-        <form id="leadForm" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-          <input type="text" name="_gotcha" class="hidden" aria-hidden="true" tabindex="-1" autocomplete="off">
-          <label class="block text-sm font-medium">Nome
-            <input name="nome" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Seu nome" />
-          </label>
-          <label class="block text-sm font-medium mt-4">Email
-            <input name="email" required type="email" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="voce@email.com" />
-          </label>
-          <label class="block text-sm font-medium mt-4">WhatsApp
-            <input name="whatsapp" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="(11) 99711-7561" />
-          </label>
-          <label class="block text-sm font-medium mt-4">Interesse
-            <select name="interesse" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
-              <option>Gestão de crise</option>
-              <option>Linhas de crédito</option>
-              <option>Estratégia com bancos/factories</option>
-              <option>Recuperação judicial</option>
-              <option>Logística tributária internacional</option>
-              <option>Mercado/Financiamento imobiliário</option>
-              <option>Outro</option>
-            </select>
-          </label>
-          <label class="block text-sm font-medium mt-4">Mensagem
-            <textarea name="mensagem" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" rows="4" placeholder="Conte rapidamente seu desafio"></textarea>
-          </label>
-          <button class="mt-5 w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">Enviar</button>
-          <p id="leadOk" class="hidden mt-3 text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg p-3">Obrigado! Recebemos sua mensagem e entraremos em contato.</p>
-          <p id="leadErr" class="hidden mt-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg p-3">Ops! Não foi possível enviar agora. Tente novamente em instantes.</p>
-          <p class="mt-3 text-xs text-slate-500">Ao enviar, você concorda em ser contatado por email/WhatsApp. Seus dados não serão compartilhados.</p>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Rodapé -->
-  <footer class="py-10 border-t border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <!-- LOGO: usa docs/logo.png -->
-        <img src="logo.png?v=4" alt="Falcone Next — Gestão & Negócios"
-             class="h-10 w-auto -mt-[2px] object-contain"/>
-        <p class="text-sm text-slate-600">© <span id="ano"></span> Falcone Next. Todos os direitos reservados.</p>
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="py-16 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-bold">O que a Falcone Consultoria faz</h2>
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold text-lg">Gestão de crise</h3><p class="mt-2 text-sm text-slate-600">Ação rápida em caixa, renegociações e continuidade.</p></div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold text-lg">Linhas de crédito</h3><p class="mt-2 text-sm text-slate-600">Acesso e estruturação com visão de risco e garantias.</p></div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold text-lg">Estratégia com bancos &amp; factories</h3><p class="mt-2 text-sm text-slate-600">Relacionamento, taxas, prazos e capital de giro.</p></div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold text-lg">Recuperação judicial</h3><p class="mt-2 text-sm text-slate-600">Preparação, documentação e condução estratégica.</p></div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold text-lg">Logística tributária internacional</h3><p class="mt-2 text-sm text-slate-600">Importação/exportação e benefícios fiscais aplicáveis.</p></div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold text-lg">Mercado &amp; financiamento imobiliário</h3><p class="mt-2 text-sm text-slate-600">Viabilidade, estruturação e garantias.</p></div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold text-lg">Consultoria estratégica</h3><p class="mt-2 text-sm text-slate-600">Planejamento, governança, indicadores e execução.</p></div>
+        </div>
       </div>
-      <a href="#" class="text-sm text-blue-600 hover:underline">Voltar ao topo</a>
-    </div>
-  </footer>
+    </section>
+
+    <!-- METODOLOGIA -->
+    <section id="metodologia" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-bold">Metodologia de Trabalho</h2>
+        <ol class="mt-8 grid md:grid-cols-3 gap-6 list-decimal list-inside">
+          <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold">1) Diagnóstico</h3><p class="mt-2 text-sm text-slate-600">Levantamento de cenário, riscos, oportunidades e prioridades.</p></li>
+          <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold">2) Planejamento</h3><p class="mt-2 text-sm text-slate-600">Metas, plano de ação, governança e indicadores.</p></li>
+          <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><h3 class="font-semibold">3) Execução</h3><p class="mt-2 text-sm text-slate-600">Implantação assistida, renegociações e acompanhamento contínuo.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER -->
+    <section id="diferenciais" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-bold">Por que escolher a Falcone Next?</h2>
+        <ul class="mt-6 grid md:grid-cols-3 gap-6 text-sm">
+          <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Experiência sólida (40+ anos)</strong><br/>Quatro décadas em finanças, mercados e gestão.</li>
+          <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Confiança de marcas</strong><br/>Projetos com líderes e referências setoriais.</li>
+          <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Visão estratégica e prática</strong><br/>Do diagnóstico à execução, foco em resultado.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-16 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold">Fale com a gente</h2>
+            <p class="mt-4 text-slate-600">Converse sobre o seu desafio e receba uma proposta sem compromisso.</p>
+            <ul class="mt-6 text-sm text-slate-700 space-y-2">
+              <li><strong>WhatsApp:</strong> <a class="text-blue-600 hover:underline" href="https://wa.me/5511997117561" target="_blank" rel="noopener">+55 11 99711 7561</a></li>
+              <li><strong>LinkedIn:</strong> <a class="text-blue-600 hover:underline" href="https://www.linkedin.com/company/falcone-next" target="_blank" rel="noopener">linkedin.com/company/falcone-next</a></li>
+            </ul>
+          </div>
+          <form id="leadForm" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <input type="text" name="_gotcha" class="hidden" aria-hidden="true" tabindex="-1" autocomplete="off">
+            <label class="block text-sm font-medium">Nome
+              <input name="nome" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="Seu nome" />
+            </label>
+            <label class="block text-sm font-medium mt-4">Email
+              <input name="email" required type="email" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="voce@email.com" />
+            </label>
+            <label class="block text-sm font-medium mt-4">WhatsApp
+              <input name="whatsapp" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" placeholder="+55 11 99711 7561" />
+            </label>
+            <label class="block text-sm font-medium mt-4">Interesse
+              <select name="interesse" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2">
+                <option>Gestão de crise</option>
+                <option>Linhas de crédito</option>
+                <option>Estratégia com bancos/factories</option>
+                <option>Recuperação judicial</option>
+                <option>Logística tributária internacional</option>
+                <option>Mercado/Financiamento imobiliário</option>
+                <option>Consultoria estratégica</option>
+                <option>Outro</option>
+              </select>
+            </label>
+            <label class="block text-sm font-medium mt-4">Mensagem
+              <textarea name="mensagem" required class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2" rows="4" placeholder="Conte rapidamente seu desafio"></textarea>
+            </label>
+            <button class="mt-5 w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">Enviar</button>
+            <p id="leadOk" class="hidden mt-3 text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg p-3">Obrigado! Recebemos sua mensagem e entraremos em contato.</p>
+            <p id="leadErr" class="hidden mt-3 text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg p-3">Ops! Não foi possível enviar agora. Tente novamente em instantes.</p>
+            <p class="mt-3 text-xs text-slate-500">Ao enviar, você concorda em ser contatado por email/WhatsApp. Seus dados não serão compartilhados.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- RODAPÉ (com logo) -->
+    <footer class="py-10 border-t border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="logo.png?v=6" alt="Falcone Next — Gestão & Negócios" class="h-10 w-auto -mt-[2px] object-contain"/>
+          <p class="text-sm text-slate-600">© <span id="ano"></span> Falcone Next. Todos os direitos reservados.</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/company/falcone-next" target="_blank" rel="noopener" class="text-sm text-blue-600 hover:underline">LinkedIn</a>
+          <a href="#topo" class="text-sm text-slate-600 hover:underline">Voltar ao topo</a>
+        </div>
+      </div>
+    </footer>
+  </div><!-- /WRAPPER -->
 
   <script>
     // Ano no rodapé
