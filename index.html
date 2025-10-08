@@ -11,8 +11,7 @@
   <!-- Favicon mínimo embutido -->
   <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==" sizes="any">
   <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -26,14 +25,14 @@
   </style>
 </head>
 <body class="bg-white text-slate-800">
-  <!-- SIDEBAR (logo lateral) -->
+  <!-- SIDEBAR (logo lateral no desktop) -->
   <aside class="hidden lg:flex fixed left-0 top-0 h-full w-28 bg-slate-50 border-r border-slate-200 items-start justify-center">
-    <a href="#topo" class="block pt-6">
-      <img src="logo.png?v=6" alt="Falcone Next — Gestão & Negócios" class="w-20 h-auto object-contain" />
+    <a href="#topo" class="block pt-6" aria-label="Falcone Next">
+      <img src="logo.png?v=8" alt="Falcone Next — Gestão & Negócios" class="w-20 h-auto object-contain" />
     </a>
   </aside>
 
-  <!-- WRAPPER: dá espaço pro sidebar em telas grandes -->
+  <!-- WRAPPER (cria espaço para a sidebar) -->
   <div id="topo" class="lg:ml-28">
 
     <!-- HEADER (sem logo) -->
@@ -46,6 +45,7 @@
           <a href="#experiencia" class="hover:text-blue-600">Experiência</a>
           <a href="#servicos" class="hover:text-blue-600">Serviços</a>
           <a href="#metodologia" class="hover:text-blue-600">Metodologia</a>
+          <a href="#cases" class="hover:text-blue-600">Cases</a>
           <a href="#contato" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">Contato</a>
           <a href="https://www.linkedin.com/company/falcone-next" target="_blank" rel="noopener" class="text-slate-600 hover:text-blue-700">LinkedIn</a>
         </nav>
@@ -60,6 +60,7 @@
           <a href="#experiencia" onclick="this.closest('#mobile').classList.add('hidden')">Experiência</a>
           <a href="#servicos" onclick="this.closest('#mobile').classList.add('hidden')">Serviços</a>
           <a href="#metodologia" onclick="this.closest('#mobile').classList.add('hidden')">Metodologia</a>
+          <a href="#cases" onclick="this.closest('#mobile').classList.add('hidden')">Cases</a>
           <div class="flex items-center gap-3">
             <a href="#contato" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white w-max" onclick="this.closest('#mobile').classList.add('hidden')">Contato</a>
             <a href="https://www.linkedin.com/company/falcone-next" target="_blank" rel="noopener" class="text-slate-600 hover:text-blue-700">LinkedIn</a>
@@ -105,7 +106,7 @@
       </div>
     </section>
 
-    <!-- APRESENTAÇÃO PESSOAL -->
+    <!-- APRESENTAÇÃO -->
     <section id="apresentacao" class="py-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 class="text-3xl sm:text-4xl font-bold">Apresentação Pessoal — CEO • Luiz Falcão</h2>
@@ -130,7 +131,7 @@
       </div>
     </section>
 
-    <!-- EXPERIÊNCIA E CASOS -->
+    <!-- EXPERIÊNCIA -->
     <section id="experiencia" class="py-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 class="text-3xl sm:text-4xl font-bold">Experiência e Casos de Sucesso</h2>
@@ -178,20 +179,29 @@
       </div>
     </section>
 
-    <!-- POR QUE ESCOLHER -->
-    <section id="diferenciais" class="py-16">
+    <!-- CASES -->
+    <section id="cases" class="py-16 bg-slate-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 class="text-3xl sm:text-4xl font-bold">Por que escolher a Falcone Next?</h2>
-        <ul class="mt-6 grid md:grid-cols-3 gap-6 text-sm">
-          <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Experiência sólida (40+ anos)</strong><br/>Quatro décadas em finanças, mercados e gestão.</li>
-          <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Confiança de marcas</strong><br/>Projetos com líderes e referências setoriais.</li>
-          <li class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm"><strong>Visão estratégica e prática</strong><br/>Do diagnóstico à execução, foco em resultado.</li>
-        </ul>
+        <h2 class="text-3xl sm:text-4xl font-bold">O que nossos clientes dizem</h2>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <blockquote class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+            <p class="text-slate-700">“A equipe da Falcone Next ajudou minha empresa a se reestruturar financeiramente em um momento delicado, oferecendo suporte constante e soluções eficazes.”</p>
+            <footer class="mt-4 text-sm text-slate-500">— Construtora, São Paulo</footer>
+          </blockquote>
+          <blockquote class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+            <p class="text-slate-700">“Nossa empresa enfrentava uma crise com linhas de crédito praticamente irrecuperáveis. A Falcone Next foi essencial na negociação e na captação de novas linhas, garantindo nossa retomada financeira.”</p>
+            <footer class="mt-4 text-sm text-slate-500">— Empresa do setor alimentício, com unidades em todo o Brasil</footer>
+          </blockquote>
+          <blockquote class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm md:col-span-2">
+            <p class="text-slate-700">“Sou muito grato à Falcone Next pelo suporte especializado em importação e pela consultoria tributária precisa, que fez toda a diferença para o nosso negócio.”</p>
+            <footer class="mt-4 text-sm text-slate-500">— Empresa do setor automotivo, São Paulo</footer>
+          </blockquote>
+        </div>
       </div>
     </section>
 
     <!-- CONTATO -->
-    <section id="contato" class="py-16 bg-slate-50">
+    <section id="contato" class="py-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="grid md:grid-cols-2 gap-10 items-start">
           <div>
@@ -237,11 +247,11 @@
       </div>
     </section>
 
-    <!-- RODAPÉ (com logo) -->
+    <!-- RODAPÉ (logo + links) -->
     <footer class="py-10 border-t border-slate-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3">
-          <img src="logo.png?v=6" alt="Falcone Next — Gestão & Negócios" class="h-10 w-auto -mt-[2px] object-contain"/>
+          <img src="logo.png?v=8" alt="Falcone Next — Gestão & Negócios" class="h-10 w-auto -mt-[2px] object-contain"/>
           <p class="text-sm text-slate-600">© <span id="ano"></span> Falcone Next. Todos os direitos reservados.</p>
         </div>
         <div class="flex items-center gap-4">
@@ -285,10 +295,11 @@
             err.classList.remove('hidden');
           }
         } catch (_) {
-          err.classList.remove('hidden');
+            err.classList.remove('hidden');
         }
       });
     }
   </script>
 </body>
 </html>
+
